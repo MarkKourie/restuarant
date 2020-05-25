@@ -2,3 +2,13 @@ body {
     background-color: black;
     color: cornsilk;
 }
+
+.nav-link {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;    
+}
+
+.nav-link:hover, .selected {
+    text-decoration: underline;
+}

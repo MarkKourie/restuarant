@@ -1,5 +1,5 @@
  
-const headingText = "The <del>Broken</del> Mended Drum"
+const headingText = "The <del>Broken</del> Mended Drum" //ensure added with innerHTML so del tags are not printed
 const taglineText = "You couldn't beat it!"
 const copy = [
     "Here at the broken drum, we provide the best entertainment and cuisine this side of Ankh-Morpork",
@@ -36,7 +36,12 @@ const addCopy = () => {
     });
 }
 
-export {addImage,
-        addHeaders,
-        addCopy }
+function renderHome() {
+    addImage();
+    addHeaders();
+    addCopy();
+}
 
+export {renderHome}
+
+//bug - if select all links by dragging or using shift, they all get selected status
