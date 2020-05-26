@@ -11,8 +11,8 @@ const copy = [
 const contentDiv = document.getElementById("content");
 
 const addImage = (source, alternative) => {
-    source = "/assets/images/bar.jpg";
-    alternative = "picture of interior of The Mended Drum";
+    source = "/assets/images/amstamp.jpg";
+    alternative = "picture of Ankh Morpork two pence stamp with coat of arms";
     const image = document.createElement("img");
     image.setAttribute("src", source);
     image.setAttribute("alt", alternative);
@@ -29,19 +29,18 @@ const addHeaders = () => {
 }
 
 const addCopy = () => {
+    let container = document.createElement('div')
+    container.classList.add("copy")
     copy.forEach(sentence => {
         let paragraph = document.createElement("p");
         paragraph.innerHTML = sentence;
-        contentDiv.appendChild(paragraph)
+        container.appendChild(paragraph)
     });
+    contentDiv.appendChild(container)
 }
 
 function renderHome() {
-    addImage();
-    addHeaders();
     addCopy();
 }
 
 export {renderHome}
-
-//bug - if select all links by dragging or using shift, they all get selected status
