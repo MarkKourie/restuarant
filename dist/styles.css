@@ -8,7 +8,7 @@ body, html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/bar.jpg");
   background-attachment: fixed;
   /* Set a specific height */
-  height: 100vh;
+  height: 30vh;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -26,6 +26,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: cornsilk;
+  font-variant: small-caps;
 }
 
 body {
@@ -62,27 +63,12 @@ ul {
     background-color: #121c26;
 }
 
-/*img {
-    max-width: 50vw;
-    max-height: 50vw;
-    display: inline;
-    margin: auto;
-    position: relative;
-}
-
-h1, h2 {
-    width: fit-content;
-    margin: auto;
-    align-self: center;
-    align-content: center;
-}*/
-
 .copy {
     text-align: center;
 }
 
 p {
-    display: inline-block;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -99,4 +85,16 @@ p {
     background-size: cover;
     overflow: visible;
     position: relative;
+}
+
+.heading {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.map {
+    max-width: 60vw;
+    max-height: 40vh;
+    min-width: 400px;
+    min-width: 340px;
 }

@@ -1,3 +1,5 @@
+import { makeHeading } from './menu.js'
+
 const details = [
 
     //address
@@ -11,11 +13,15 @@ const details = [
 
 const contentDiv = document.getElementById('content')
 
-function contactTester() {
-    console.log("hello from contact")
+function renderMap() {
+    const mapImage = document.createElement("img");
+    mapImage.classList.add('map');
+    mapImage.src = "/assets/images/map.jpg";
+    contentDiv.appendChild(mapImage);
 }
 
 const renderContact = () => {
+    makeHeading("Contact")
     let contactDiv = document.createElement('div');
     details.forEach((detail) => {
         let paragraph = document.createElement('p');
@@ -23,6 +29,7 @@ const renderContact = () => {
         contactDiv.appendChild(paragraph);
     })
     contentDiv.appendChild(contactDiv)
+    renderMap()
 }
 
 export { renderContact }

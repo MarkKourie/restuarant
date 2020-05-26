@@ -1,6 +1,3 @@
-function menuTester() {
-    console.log("hello from menu")
-}
 const contentDiv = document.getElementById("content")
 
 const items = [
@@ -29,27 +26,34 @@ const items = [
     price: 0,
     image: "/assets/images/wow-wow-sauce.jpg"},
 ]
+function makeHeading(headingText) { 
+    const heading = document.createElement('h1');
+    heading.textContent = headingText;
+    heading.classList.add(`heading`);
+    contentDiv.appendChild(heading);
+}
 
 const renderMenu = () => {
+    makeHeading("Menu");
     items.forEach((item) => {
         let itemDiv = document.createElement('div');
         let itemLabel = document.createElement('h3');
         let itemPricetag = document.createElement('p');
-        let children = [itemLabel, itemPricetag]
+        let children = [itemLabel, itemPricetag];
         //either do something with description or remove it
 
-        itemDiv.classList.add("menu-item")
+        itemDiv.classList.add("menu-item");
         itemDiv.style.backgroundImage = `url('${item.image}'`;
         itemLabel.textContent = item.name;
         itemPricetag.textContent = `${item.price} coppers`;
 
         children.forEach((child) => {
-            child.classList.add("menu")
+            child.classList.add("menu");
             itemDiv.appendChild(child);
         });
-        contentDiv.appendChild(itemDiv)
+        contentDiv.appendChild(itemDiv);
     });
 }
 
-export { renderMenu }
+export { renderMenu, makeHeading }
 

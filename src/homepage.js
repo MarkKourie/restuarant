@@ -1,6 +1,3 @@
- 
-const headingText = "The <del>Broken</del> Mended Drum" //ensure added with innerHTML so del tags are not printed
-const taglineText = "You couldn't beat it!"
 const copy = [
     "Here at the broken drum, we provide the best entertainment and cuisine this side of Ankh-Morpork",
     "Try our famous inverted MeatPie Floater and add a bit of Wow Wow sauce if you dare. We bake Jammy Devils fresh daily, and our scumble is the most potent you'll find",
@@ -9,24 +6,6 @@ const copy = [
 ];
 
 const contentDiv = document.getElementById("content");
-
-const addImage = (source, alternative) => {
-    source = "/assets/images/amstamp.jpg";
-    alternative = "picture of Ankh Morpork two pence stamp with coat of arms";
-    const image = document.createElement("img");
-    image.setAttribute("src", source);
-    image.setAttribute("alt", alternative);
-    contentDiv.appendChild(image);
-}
-
-const addHeaders = () => {
-    const heading = document.createElement('h1');
-    const tagline = document.createElement('h2');
-    heading.innerHTML = headingText;
-    tagline.innerHTML = taglineText;
-    contentDiv.appendChild(heading);
-    contentDiv.appendChild(tagline);
-}
 
 const addCopy = () => {
     let container = document.createElement('div')
@@ -44,3 +23,11 @@ function renderHome() {
 }
 
 export {renderHome}
+
+
+/*FEATURES TO CONSIDER ADDING AT A LATER STAGE:
+
+1. div containing socials info
+2. div containing slideshow of recent photos at the bar
+
+*/
